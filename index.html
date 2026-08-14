@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empatia & Compreensão</title>
+    <style>
+        /* --- ESTILOS CSS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            width: 100%;
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 800px;
+            width: 90%;
+            margin: 2rem 0;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #6e8efb;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .quote-box {
+            background-color: #eef2fe;
+            border-left: 4px solid #6e8efb;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* --- SESSÃO DO BOTÃO DE LIKE --- */
+        .like-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            background-color: #fafafa;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            margin-top: 2rem;
+        }
+
+        .like-btn {
+            background-color: #a777e3;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .like-btn:hover {
+            background-color: #935fd3;
+            transform: scale(1.05);
+        }
+
+        .like-btn:active {
+            transform: scale(0.95);
+        }
+
+        .like-count {
+            margin-top: 0.8rem;
+            font-size: 0.95rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 1.5rem;
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Empatia & Compreensão</h1>
+        <p>A arte de enxergar o mundo com os olhos do outro.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>O que é Empatia?</h2>
+            <p>
+                Empatia é a capacidade de se colocar no lugar de outra pessoa, buscando compreender seus sentimentos, perspectivas e motivações sem julgamento prévio. É uma ponte invisível que nos conecta e fortalece nossas relações interpessoais.
+            </p>
+        </section>
+
+        <section>
+            <h2>A Importância da Compreensão</h2>
+            <p>
+                Compreender não significa necessariamente concordar com tudo, mas sim reconhecer que cada indivíduo possui uma história única de vida que molda sua forma de pensar e agir. Quando praticamos a escuta ativa, abrimos espaço para diálogos mais saudáveis e construtivos.
+            </p>
+
+            <div class="quote-box">
+                "A empatia é ver com os olhos de outro, ouvir com os ouvidos de outro e sentir com o coração de outro."
+            </div>
+        </section>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 2rem 0;">
+
+        <div class="like-section">
+            <button class="like-btn" onclick="adicionarLike()">
+                ❤️ Enviar Empatia
+            </button>
+            <div class="like-count">
+                <span id="contador">0</span> curtidas recebidas
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Projeto Empatia & Compreensão</p>
+    </footer>
+
+    <script>
+        let quantidadeLikes = 0;
+
+        function adicionarLike() {
+            quantidadeLikes++;
+            document.getElementById('contador').innerText = quantidadeLikes;
+        }
+    </script>
+
+</body>
+</html>

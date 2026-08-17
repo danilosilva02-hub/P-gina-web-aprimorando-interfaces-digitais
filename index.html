@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empatia & Compreensão</title>
+    <title>Empatia & Compreensão Humanitária</title>
     <style>
-        /* --- ESTILOS CSS --- */
         * {
             margin: 0;
             padding: 0;
@@ -14,9 +13,9 @@
         }
 
         body {
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
+            background-color: #f0f4f8;
+            color: #2d3748;
+            line-height: 1.8;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -24,108 +23,158 @@
         }
 
         header {
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            background: linear-gradient(135deg, #4a00e0, #8e2de2);
             color: white;
             width: 100%;
-            padding: 3rem 1rem;
+            padding: 4rem 1rem;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
 
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 3rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: 1px;
         }
 
         header p {
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         main {
-            max-width: 800px;
+            max-width: 900px;
             width: 90%;
-            margin: 2rem 0;
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin: 3rem 0;
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
         }
 
         section {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         h2 {
-            color: #6e8efb;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+            color: #4a00e0;
+            margin-bottom: 1.2rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
         }
 
         p {
-            margin-bottom: 1rem;
-            color: #555;
+            margin-bottom: 1.2rem;
+            color: #4a5568;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #8e2de2;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h3 {
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
         }
 
         .quote-box {
-            background-color: #eef2fe;
-            border-left: 4px solid #6e8efb;
-            padding: 1rem;
-            margin: 1.5rem 0;
+            background-color: #f3e8ff;
+            border-left: 5px solid #8e2de2;
+            padding: 1.5rem;
+            margin: 2.5rem 0;
             font-style: italic;
-            border-radius: 0 8px 8px 0;
+            border-radius: 0 12px 12px 0;
+            font-size: 1.15rem;
+            color: #4a154b;
         }
 
-        /* --- SESSÃO DO BOTÃO DE LIKE --- */
+        .faq-item {
+            margin-bottom: 1.5rem;
+            background-color: #f8fafc;
+            padding: 1.2rem;
+            border-radius: 8px;
+            border: 1px solid #edf2f7;
+        }
+
+        .faq-item h3 {
+            color: #4a00e0;
+            margin-bottom: 0.5rem;
+        }
+
         .like-section {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 1.5rem;
-            background-color: #fafafa;
-            border-radius: 8px;
-            border: 1px solid #eee;
-            margin-top: 2rem;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #ffffff, #f7fafc);
+            border-radius: 16px;
+            border: 2px dashed #cbd5e0;
+            margin-top: 3rem;
+            text-align: center;
         }
 
         .like-btn {
-            background-color: #a777e3;
+            background: linear-gradient(135deg, #8e2de2, #4a00e0);
             color: white;
             border: none;
-            padding: 0.8rem 1.8rem;
-            font-size: 1rem;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
             font-weight: bold;
-            border-radius: 25px;
+            border-radius: 50px;
             cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(142, 45, 226, 0.3);
         }
 
         .like-btn:hover {
-            background-color: #935fd3;
             transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(142, 45, 226, 0.4);
         }
 
         .like-btn:active {
-            transform: scale(0.95);
+            transform: scale(0.98);
         }
 
         .like-count {
-            margin-top: 0.8rem;
-            font-size: 0.95rem;
-            color: #666;
+            margin-top: 1.2rem;
+            font-size: 1.1rem;
+            color: #4a5568;
             font-weight: 600;
         }
 
         footer {
             margin-top: auto;
-            padding: 1.5rem;
+            padding: 2rem;
             text-align: center;
-            color: #888;
-            font-size: 0.9rem;
+            color: #718096;
+            font-size: 0.95rem;
+            width: 100%;
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
         }
     </style>
 </head>
@@ -133,42 +182,92 @@
 
     <header>
         <h1>Empatia & Compreensão</h1>
-        <p>A arte de enxergar o mundo com os olhos do outro.</p>
+        <p>Promovendo pontes sociais, acolhimento e escuta ativa no mundo contemporâneo.</p>
     </header>
 
     <main>
         <section>
-            <h2>O que é Empatia?</h2>
+            <h2>O Pilar das Relações Humanas</h2>
             <p>
-                Empatia é a capacidade de se colocar no lugar de outra pessoa, buscando compreender seus sentimentos, perspectivas e motivações sem julgamento prévio. É uma ponte invisível que nos conecta e fortalece nossas relações interpessoais.
+                A empatia não é apenas um sentimento superficial de simpatia ou pena por alguém; trata-se de um processo cognitivo e emocional profundo. Significa tentar enxergar a realidade através da perspectiva do outro, desapegando-se temporariamente dos próprios filtros mentais, julgamentos morais e preconceitos.
+            </p>
+            <p>
+                Em um mundo cada vez mais conectado digitalmente, porém distante afetivamente, desenvolver a capacidade de compreender os sentimentos alheios tornou-se uma habilidade indispensável para a convivência pacífica em sociedade.
             </p>
         </section>
 
         <section>
-            <h2>A Importância da Compreensão</h2>
-            <p>
-                Compreender não significa necessariamente concordar com tudo, mas sim reconhecer que cada indivíduo possui uma história única de vida que molda sua forma de pensar e agir. Quando praticamos a escuta ativa, abrimos espaço para diálogos mais saudáveis e construtivos.
-            </p>
-
-            <div class="quote-box">
-                "A empatia é ver com os olhos de outro, ouvir com os ouvidos de outro e sentir com o coração de outro."
+            <h2>As Três Dimensões da Empatia</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Empatia Cognitiva</h3>
+                    <p>Corresponde à habilidade intelectual de raciocinar sobre o estado mental de outra pessoa. É saber como o outro pensa e entender sua perspectiva de forma lógica.</p>
+                </div>
+                <div class="card">
+                    <h3>Empatia Emocional</h3>
+                    <p>É a conexão direta onde sentimos fisicamente ou emocionalmente a dor, alegria ou ansiedade do outro, gerando uma ressonância afetiva imediata.</p>
+                </div>
+                <div class="card">
+                    <h3>Empatia Compassiva</h3>
+                    <p>Vai além da compreensão e do sentimento: impulsiona a pessoa a agir ativamente para aliviar o sofrimento alheio ou prestar auxílio prático.</p>
+                </div>
             </div>
         </section>
 
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 2rem 0;">
+        <div class="quote-box">
+            "Se existe um segredo para o sucesso, ele reside na habilidade de ver o ponto de vista da outra pessoa e enxergar as coisas tanto pelo ângulo dela quanto pelo seu."
+        </div>
 
+        <section>
+            <h2>Como Praticar a Empatia na Rotina</h2>
+            <p>A empatia é como um músculo que pode ser treinado diariamente através de atitudes conscientes:</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>1. Escuta Ativa</h3>
+                    <p>Ouça com a intenção genuína de compreender, e não apenas de formular uma resposta rápida ou dar um conselho não solicitado.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Suspensão do Julgamento</h3>
+                    <p>Reconheça que cada indivíduo carrega um histórico de vida único que justifica a maneira como ele reage às situações.</p>
+                </div>
+                <div class="card">
+                    <h3>3. Curiosidade Humana</h3>
+                    <p>Faça perguntas abertas e demonstre interesse real sobre a trajetória e os sentimentos das pessoas ao seu redor.</p>
+                </div>
+                <div class="card">
+                    <h3>4. Linguagem Acolhedora</h3>
+                    <p>Utilize palavras que validem os sentimentos do outro, evitando frases que minimizem suas dores ou experiências.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Perguntas Frequentes (FAQ)</h2>
+            <div class="faq-item">
+                <h3>Empatia é o mesmo que concordar com o outro?</h3>
+                <p>Não. Você pode compreender perfeitamente por que alguém age ou pensa de determinada forma sem necessariamente concordar com as atitudes ou ideologias dessa pessoa.</p>
+            </div>
+            <div class="faq-item">
+                <h3>É possível desenvolver empatia se eu não nasci com ela?</h3>
+                <p>Sim. Embora algumas pessoas tenham maior facilidade natural, a empatia é uma habilidade socioemocional que pode ser aprendida e aprimorada com a prática consciente e a convivência interpessoal.</p>
+            </div>
+        </section>
+
+        <!-- Contador de Likes -->
         <div class="like-section">
+            <h2>Apoie esta Causa</h2>
+            <p>Se você acredita que o mundo precisa de mais diálogo, escuta e compreensão, deixe o seu apoio abaixo:</p>
             <button class="like-btn" onclick="adicionarLike()">
                 ❤️ Enviar Empatia
             </button>
             <div class="like-count">
-                <span id="contador">0</span> curtidas recebidas
+                <span id="contador">0</span> demonstrações de apoio registradas
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 - Projeto Empatia & Compreensão</p>
+        <p>&copy; 2026 - Portal de Conscientização Humana. Todos os direitos reservados.</p>
     </footer>
 
     <script>

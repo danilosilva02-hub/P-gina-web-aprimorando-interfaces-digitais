@@ -39,7 +39,8 @@
 
         header p {
             font-size: 1.25rem;
-            opacity: 0.9;
+            color: #ffffff;
+            opacity: 1;
             max-width: 600px;
             margin: 0 auto;
         }
@@ -73,6 +74,15 @@
             text-align: justify;
         }
 
+        .section-img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -92,6 +102,14 @@
         .card:hover {
             transform: translateY(-4px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
         }
 
         .card h3 {
@@ -170,7 +188,7 @@
             margin-top: auto;
             padding: 2rem;
             text-align: center;
-            color: #ffffff; 
+            color: #112A46; 
             font-size: 0.95rem;
             width: 100%;
             background-color: #ffffff;
@@ -188,6 +206,7 @@
     <main>
         <section>
             <h2>O Pilar das Relações Humanas</h2>
+            <img class="section-img" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80" alt="Pessoas sorrindo juntas e conectadas">
             <p>
                 A empatia não é apenas um sentimento superficial de simpatia ou pena por alguém; trata-se de um processo cognitivo e emocional profundo. Significa tentar enxergar a realidade através da perspectiva do outro, desapegando-se temporariamente dos próprios filtros mentais, julgamentos morais e preconceitos.
             </p>
@@ -200,14 +219,17 @@
             <h2>As Três Dimensões da Empatia</h2>
             <div class="cards-grid">
                 <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=500&q=80" alt="Representação de reflexão e pensamento">
                     <h3>Empatia Cognitiva</h3>
                     <p>Corresponde à habilidade intelectual de raciocinar sobre o estado mental de outra pessoa. É saber como o outro pensa e entender sua perspectiva de forma lógica.</p>
                 </div>
                 <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?auto=format&fit=crop&w=500&q=80" alt="Duas pessoas se abraçando em suporte emocional">
                     <h3>Empatia Emocional</h3>
                     <p>É a conexão direta onde sentimos fisicamente ou emocionalmente a dor, alegria ou ansiedade do outro, gerando uma ressonância afetiva imediata.</p>
                 </div>
                 <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=500&q=80" alt="Mãos dadas oferecendo ajuda prática">
                     <h3>Empatia Compassiva</h3>
                     <p>Vai além da compreensão e do sentimento: impulsiona a pessoa a agir ativamente para aliviar o sofrimento alheio ou prestar auxílio prático.</p>
                 </div>
@@ -253,7 +275,6 @@
             </div>
         </section>
 
-        
         <div class="like-section">
             <h2>Apoie esta Causa</h2>
             <p>Se você acredita que o mundo precisa de mais diálogo, escuta e compreensão, deixe o seu apoio abaixo:</p>

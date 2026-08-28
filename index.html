@@ -5,16 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empatia & Compreensão Humanitária</title>
     <style>
+        :root {
+            --bg-body: #ACC8E5;
+            --bg-card: #f7fafc;
+            --bg-main: #ffffff;
+            --bg-quote: #f3e8ff;
+            --bg-faq: #f8fafc;
+            --bg-footer: #ffffff;
+            --text-color: #112A46;
+            --heading-color: #1a0068;
+            --border-color: #e2e8f0;
+            --header-gradient: linear-gradient(135deg, #112A46, #4a00e0);
+            --like-gradient: linear-gradient(135deg, #ffffff, #f7fafc);
+        }
+
+        body.dark-mode {
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --bg-main: #1e293b;
+            --bg-quote: #312e81;
+            --bg-faq: #334155;
+            --bg-footer: #0f172a;
+            --text-color: #e2e8f0;
+            --heading-color: #93c5fd;
+            --border-color: #334155;
+            --header-gradient: linear-gradient(135deg, #020617, #1e1b4b);
+            --like-gradient: linear-gradient(135deg, #1e293b, #0f172a);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
 
         body {
-            background-color: #ACC8E5; 
-            color: #112A46; 
+            background-color: var(--bg-body); 
+            color: var(--text-color); 
             line-height: 1.8;
             display: flex;
             flex-direction: column;
@@ -23,12 +52,32 @@
         }
 
         header {
-            background: linear-gradient(135deg, #112A46, #4a00e0);
+            background: var(--header-gradient);
             color: white;
             width: 100%;
             padding: 4rem 1rem;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+
+        .theme-toggle-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: bold;
+            backdrop-filter: blur(5px);
+        }
+
+        .theme-toggle-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
         }
 
         header h1 {
@@ -49,7 +98,7 @@
             max-width: 900px;
             width: 90%;
             margin: 3rem 0;
-            background: #ffffff;
+            background: var(--bg-main);
             padding: 3rem;
             border-radius: 16px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -60,16 +109,16 @@
         }
 
         h2 {
-            color: #1a0068; 
+            color: var(--heading-color); 
             margin-bottom: 1.2rem;
             font-size: 1.8rem;
-            border-bottom: 2px solid #e2e8f0;
+            border-bottom: 2px solid var(--border-color);
             padding-bottom: 0.5rem;
         }
 
         p {
             margin-bottom: 1.2rem;
-            color: #112A46; 
+            color: var(--text-color); 
             font-size: 1.05rem;
             text-align: justify;
         }
@@ -91,9 +140,9 @@
         }
 
         .card {
-            background-color: #f7fafc;
-            border: 1px solid #e2e8f0;
-            border-left: 4px solid #112A46;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid #4a00e0;
             padding: 1.5rem;
             border-radius: 8px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -101,7 +150,7 @@
 
         .card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
 
         .card-img {
@@ -113,32 +162,32 @@
         }
 
         .card h3 {
-            color: #112A46; 
+            color: var(--heading-color); 
             margin-bottom: 0.5rem;
             font-size: 1.2rem;
         }
 
         .quote-box {
-            background-color: #f3e8ff;
-            border-left: 5px solid #112A46;
+            background-color: var(--bg-quote);
+            border-left: 5px solid #4a00e0;
             padding: 1.5rem;
             margin: 2.5rem 0;
             font-style: italic;
             border-radius: 0 12px 12px 0;
             font-size: 1.15rem;
-            color: #112A46; 
+            color: var(--text-color); 
         }
 
         .faq-item {
             margin-bottom: 1.5rem;
-            background-color: #f8fafc;
+            background-color: var(--bg-faq);
             padding: 1.2rem;
             border-radius: 8px;
-            border: 1px solid #edf2f7;
+            border: 1px solid var(--border-color);
         }
 
         .faq-item h3 {
-            color: #112A46; 
+            color: var(--heading-color); 
             margin-bottom: 0.5rem;
         }
 
@@ -148,9 +197,9 @@
             align-items: center;
             justify-content: center;
             padding: 2.5rem;
-            background: linear-gradient(135deg, #ffffff, #f7fafc);
+            background: var(--like-gradient);
             border-radius: 16px;
-            border: 2px dashed #cbd5e0;
+            border: 2px dashed var(--border-color);
             margin-top: 3rem;
             text-align: center;
         }
@@ -180,7 +229,7 @@
         .like-count {
             margin-top: 1.2rem;
             font-size: 1.1rem;
-            color: #112A46; 
+            color: var(--text-color); 
             font-weight: 600;
         }
 
@@ -188,17 +237,18 @@
             margin-top: auto;
             padding: 2rem;
             text-align: center;
-            color: #112A46; 
+            color: var(--text-color); 
             font-size: 0.95rem;
             width: 100%;
-            background-color: #ffffff;
-            border-top: 1px solid #e2e8f0;
+            background-color: var(--bg-footer);
+            border-top: 1px solid var(--border-color);
         }
     </style>
 </head>
 <body>
 
     <header>
+        <button class="theme-toggle-btn" id="theme-toggle" onclick="toggleTheme()">🌙 Modo Escuro</button>
         <h1>Empatia & Compreensão</h1>
         <p>Promovendo pontes sociais, acolhimento e escuta ativa no mundo contemporâneo.</p>
     </header>
@@ -297,6 +347,19 @@
         function adicionarLike() {
             quantidadeLikes++;
             document.getElementById('contador').innerText = quantidadeLikes;
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            const btn = document.getElementById('theme-toggle');
+            
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                btn.innerText = '☀️ Modo Claro';
+            } else {
+                btn.innerText = '🌙 Modo Escuro';
+            }
         }
     </script>
 

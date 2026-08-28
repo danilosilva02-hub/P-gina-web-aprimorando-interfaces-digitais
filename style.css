@@ -1,0 +1,189 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ACC8E5; 
+            color: #112A46; 
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #112A46, #4a00e0);
+            color: white;
+            width: 100%;
+            padding: 4rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: #ffffff;
+            opacity: 1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        main {
+            max-width: 900px;
+            width: 90%;
+            margin: 3rem 0;
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: #1a0068; 
+            margin-bottom: 1.2rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: #112A46; 
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        .section-img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #112A46;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            color: #112A46; 
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .quote-box {
+            background-color: #f3e8ff;
+            border-left: 5px solid #112A46;
+            padding: 1.5rem;
+            margin: 2.5rem 0;
+            font-style: italic;
+            border-radius: 0 12px 12px 0;
+            font-size: 1.15rem;
+            color: #112A46; 
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            background-color: #f8fafc;
+            padding: 1.2rem;
+            border-radius: 8px;
+            border: 1px solid #edf2f7;
+        }
+
+        .faq-item h3 {
+            color: #112A46; 
+            margin-bottom: 0.5rem;
+        }
+
+        .like-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #ffffff, #f7fafc);
+            border-radius: 16px;
+            border: 2px dashed #cbd5e0;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .like-btn {
+            background: linear-gradient(135deg, #112A46, #4a00e0);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(17, 42, 70, 0.3);
+        }
+
+        .like-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(17, 42, 70, 0.4);
+        }
+
+        .like-btn:active {
+            transform: scale(0.98);
+        }
+
+        .like-count {
+            margin-top: 1.2rem;
+            font-size: 1.1rem;
+            color: #112A46; 
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 2rem;
+            text-align: center;
+            color: #112A46; 
+            font-size: 0.95rem;
+            width: 100%;
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+        }

@@ -5,9 +5,13 @@
     --cor-fundo-faq: #f8fafc;
     --cor-fundo-quote: #f3e8ff;
     --cor-texto: #112A46;
+    --cor-secundaria: #3782d2;
+    --cor-contraste: #f3eef7;
     --cor-titulo-h2: #1a0068;
     --cor-borda: #e2e8f0;
     --cor-destaque-borda: #112A46;
+
+    --fonte-texto: 'Segoe UI', sans-serif;
 }
 
 .tema-escuro {
@@ -16,20 +20,35 @@
     --cor-fundo-card: #334155;
     --cor-fundo-faq: #334155;
     --cor-fundo-quote: #2e1065;
-    --cor-texto: #f1f5f9;
+    --cor-texto: #ffffff;
+    --cor-secundaria: #c9e3ff;
+    --cor-contraste: #ffffff;
     --cor-titulo-h2: #c084fc;
     --cor-borda: #475569;
     --cor-destaque-borda: #818cf8;
+}
+
+.tema-escuro a {
+    color: var(--cor-secundaria);
+}
+
+.tema-escuro p {
+    color: var(--cor-texto);
+}
+
+.tema-escuro header p {
+    color: var(--cor-contraste);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
+    max-width: 100vw;
+    font-family: var(--fonte-texto);
     background-color: var(--cor-fundo-body); 
     color: var(--cor-texto); 
     line-height: 1.8;
